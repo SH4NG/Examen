@@ -1,0 +1,125 @@
+valorA=0
+valorB=0
+valorC=0
+valorD=0
+lista_rut=[]
+lista_rut2=[]
+lista_rut3=[]
+lista_rut4=[]
+listaA=[1,5,9,13,17,21,25,29,33,37]
+listaB=[2,6,10,14,18,22,26,30,34,38]
+listaC=[3,7,11,15,19,23,27,31,35,39]
+listaD=[4,8,12,16,20,24,28,32,36,40]
+
+menu=0
+print(f"1.Compra de departamento\n2.Mostrar departamentos Disponible\n3.Ver listado de compradores\n4.Mostrar ganancias totales\n5.Salir")
+while menu==0:
+  op=int(input("Ingrese una opción: "))
+  if op>=1 and op<=5:
+  
+    if op==1:
+      print(f"Tipo A: 3.800UF\nTipo B: 3.000UF\nTipo C: 2.800UF\nTipo D: 3.500UF")
+      departamento=(input("Ingrese el departamento que desea comprar(A,B,C,D): "))
+      if departamento=="A":
+        print("P1,P2,P3,P4,P5,P6,P7,P8,P9,P10")
+        print(listaA)
+        numero=int(input("Ingrese el numero del departamento: "))
+        rut=int(input("Ingrese su rut sin punto ni coma: "))
+        confirmar=(input("Desea confirmar la compra?(si/no)\n"))
+        if confirmar == "si":
+          print("Gracias por su compra")
+          valorA=valorA+3800
+          for i,elemento in enumerate(listaA):
+            if elemento==numero:
+              listaA.remove(numero)
+              listaA.insert(i,"x")
+              lista_rut.append(rut)
+              
+
+
+            
+
+      if departamento=="B":
+        print("P1,P2,P3,P4,P5,P6,P7,P8,P9,P10")
+        print(listaB)
+        numero2=int(input("Ingrese el numero del departamento: "))
+        rut2=int(input("Ingrese su rut sin punto ni coma: "))
+        confirmar=(input("Desea confirmar la compra?(si/no)\n"))
+        if confirmar == "si":
+          print("Gracias por su compra")
+          valorB=valorB+3000
+          for i,elemento in enumerate(listaB):
+            if elemento==numero2:
+              listaB.remove(numero2)
+              listaB.insert(i,"x")
+              lista_rut2.append(rut2)
+              
+      if departamento=="C":
+        print("P1,P2,P3,P4,P5,P6,P7,P8,P9,P10")
+        print(listaC)
+        numero3=int(input("Ingrese el numero del departamento: "))
+        rut3=int(input("Ingrese su rut sin punto ni coma: "))
+        confirmar=(input("Desea confirmar la compra?(si/no)\n"))
+        if confirmar == "si":
+          print("Gracias por su compra")
+          valorC=valorC+2800
+          for i,elemento in enumerate(listaC):
+            if elemento==numero3:
+              listaC.remove(numero3)
+              listaC.insert(i,"x")
+              lista_rut3.append(rut3)
+      if departamento=="D":
+        print("P1,P2,P3,P4,P5,P6,P7,P8,P9,P10")
+        print(listaD)
+        numero4=int(input("Ingrese el numero del departamento: "))
+        rut4=int(input("Ingrese su rut sin punto ni coma: "))
+        confirmar=(input("Desea confirmar la compra?(si/no)\n"))
+        if confirmar == "si":
+          print("Gracias por su compra")
+          valorD=valorD+3.500
+          for i,elemento in enumerate(listaD):
+            if elemento==numero4:
+              listaA.remove(numero4)
+              listaA.insert(i,"x")
+              lista_rut4.append(rut4)
+    if op==2:
+      print("========================================================")
+      print(f"Departamentos A: {listaA}")
+      print("========================================================")
+      print(f"Departamentos B: {listaB}")
+      print("========================================================")
+      print(f"Departamentos C: {listaC}")
+      print("========================================================")
+      print(f"Departamentos D: {listaD}")
+      print("========================================================")
+    if op==3:
+      lista_rut.sort()
+      lista_rut2.sort()
+      lista_rut3.sort()
+      lista_rut4.sort()
+      print("========================================================")
+      print(f"Propietartios Tipo A: {lista_rut}")
+      print("========================================================")
+      print(f"Propietartios Tipo B: {lista_rut2}")
+      print("========================================================")
+      print(f"Propietartios Tipo C: {lista_rut3}")
+      print("========================================================")
+      print(f"Propietartios Tipo D: {lista_rut4}")
+      print("========================================================")
+    if op==4:
+      print("==============================================")
+      print(f"Ganancias del Tipo A: {valorA} UF")
+      print("==============================================")  
+      print(f"Ganancias del Tipo B: {valorB} UF")  
+      print("==============================================")  
+      print(f"Ganancias del Tipo C: {valorC} UF")    
+      print("==============================================")
+      print(f"Ganancias del Tipo D: {valorD} UF")
+      print(f"TOTAL: {valorA+valorB+valorC+valorD}")
+    if op==5:}
+      print("HASTA LUEGO!!")
+      menu=1  
+
+
+
+      
